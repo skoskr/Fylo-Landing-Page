@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Fylo landing page with two column layout</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+  <main class="font-raleway">
+    <!--Header-->
+    <header>
+      <div class="flex items-center justify-between p-8 md:p-16">
+        <a href="#">
+          <img src="./images/logo.svg" alt="logo" class="w-32 md:w-full">
+        </a>
+        <div class="space-x-4 md:space-x-8 text-xs md:text-base">
+          <a href="#" class="hover:text-desaturatedblue duration-500">Features</a>
+          <a href="#" class="hover:text-desaturatedblue duration-500">Team</a>
+          <a href="#" class="hover:text-desaturatedblue duration-500">Sign In</a>
+        </div>
+      </div>
+    </header>
+
+    <!--Get Started Section-->
+    <section class="grid grid-col-2 gap-10 mb-8 md:mb-20 px-8 md:px-16">
+      <div class="grid grid-rows-2 md:grid-rows-none items-center justify-center">
+        <div class="text-center md:text-left">
+          <h2 class="text-xl md:text-3xl font-bold">
+            All your files in one secure location, accessible anywhere.
+          </h2>
+          <p class="py-5 font-open text-sm">
+            Fylo stores your most important files in one secure location.
+            Access them wherever you need, share and collaborate with friends,
+            family, and co-workers.
+          </p>
+          <form name="form1" action="#" class="grid grid-cols-1 grid-rows-2 md:grid-cols-3 md:grid-rows-1 gap-4 justify-center">
+            <input type="email" name="text1" id="text1"
+              class="border border-verydarkblue border-opacity-50 rounded focus:outline-none px-6 py-2 w-full placeholder:text-lightgray placeholder:text-xs md:col-span-2"
+              placeholder="email@example.com">
+              <button
+              class="bg-brightblue hover:bg-hbrightblue text-white px-6 py-2 rounded-md text-bold w-full font-open" onclick="ValidateEmail(document.form1.text1,'checkEmail','text1', event.preventDefault())">
+              Get Started
+            </button>
+            <div id="checkEmail" class="text-xs text-red-400"></div>
+          </form>
+        </div>
+      </div>
+      <img src="./images/illustration-1.svg" alt="illu1" class="row-start-1 md:col-start-2 md:col-span-1">
+    </section>
+
+    <!--Image in between-->
+    <img src="./images/bg-curve-desktop.svg" alt="curved">
+
+    <!--Stay Section-->
+    <section
+      class="grid grid-rows-2 md:grid-rows-none md:grid-cols-2 items-center justify-center md:gap-20 px-8 md:px-16 bg-lightgrayishblue pb-16">
+      <div class="text-center md:text-left">
+        <h2 class="text-xl md:text-3xl font-bold">
+          Stay productive, wherever you are
+        </h2>
+        <div class="py-8">
+          <p class="font-open text-sm">
+            Never let location be an issue when accessing your files. Fylo has you
+            covered for all of your file storage needs.
+          </p>
+          <p class="font-open text-sm py-5">
+            Securely share files and folders with friends, family and colleagues for
+            live collaboration. No email attachments required!
+          </p>
+          <a href="#"
+            class="inline-flex items-center border-b border-moderatecyan text-moderatecyan justify-center md:justify-start hover:text-hmoderatecyan">
+            See how Fylo works
+            <img src="./images/icon-arrow.svg" alt="arrow" class="pl-1">
+          </a>
+        </div>
+        <div class="grid md:grid-cols-3 text-left">
+          <div class="col-span-2 bg-white rounded p-8 font-open">
+            <img src="./images/icon-quotes.svg" alt="quotes" class="pb-3">
+            Fylo has improved our team productivity by an order of magnitude. Since
+            making the switch our team has become a well-oiled collaboration machine.
+            <div class="flex items-center justify-start gap-2 pt-3">
+              <img src="./images/avatar-testimonial.jpg" alt="pp" class="rounded-full w-8 h-8">
+              <div class="grid">
+                <p class="font-bold text-sm">Kyle Burton</p>
+                <p class="text-xs">Founder & CEO, Huddle</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./images/illustration-2.svg" alt="illu2" class="row-start-1 md:col-start-2">
+    </section>
+
+    <!--Early Access Section-->
+    <section
+      class="grid grid-rows-2 md:grid-rows-none md:grid-cols-2 bg-desaturatedblue px-8 md:px-16 py-24 gap-8 md:gap-32 items-center text-center md:text-left">
+      <div>
+        <h2 class="text-xl md:text-3xl font-bold text-white mb-6">
+          Get early access today
+        </h2>
+        <p class="text-white font-open text-sm md:pr-10">
+          It only takes a minute to sign up and our free starter tier is extremely generous.
+          If you have any questions, our support team would be happy to help you.
+        </p>
+      </div>
+      <form name="form2" class="grid grid-cols-1 grid-rows-2 gap-4 justify-center">
+        <div>
+          <input type="email" name="text2" id="text2"
+            class="border border-verydarkblue border-opacity-50 rounded focus:outline-none px-6 py-2 w-full placeholder:text-lightgray placeholder:text-xs"
+            placeholder="email@example.com">
+            <div id="checkEmail2" class="text-xs text-red-400"></div>
+        </div>
+        <button
+          class="bg-brightblue hover:bg-hbrightblue text-white px-6 py-2 rounded-md text-bold w-full md:w-56 font-open" onclick="ValidateEmail(document.form2.text2,'checkEmail2', 'text2', event.preventDefault())">
+          Get Started For Free
+        </button>
+      </form>
+    </section>
+
+    <!--Footer-->
+    <footer class="grid grid-rows-1 md:grid-rows-2 bg-verydarkblue text-white font-open px-8 md:px-16 py-8 gap-y-4">
+      <div class="grid items-end justify-start mb-10 md:mb-0">
+        <img src="./images/logow.svg" alt="logo">
+      </div>
+      <div class="grid grid-rows-1 md:grid-rows-none md:grid-cols-4 text-sm space-y-10 md:space-y-0">
+        <div class="space-y-4">
+          <p class="flex"><img src="./images/icon-phone.svg" alt="phone" class="mr-2"> Phone: +1-543-123-4567</p>
+          <p class="flex"><img src="./images/icon-email.svg" alt="email" class="mr-2"> example@fylo.com</p>
+        </div>
+        <div class="grid grid-rows-4 gap-4 md:justify-center mb-10 md:mb-0">
+          <a href="#" class="hover:text-hbrightblue">About Us</a>
+          <a href="#" class="hover:text-hbrightblue">Jobs</a>
+          <a href="#" class="hover:text-hbrightblue">Press</a>
+          <a href="#" class="hover:text-hbrightblue">Blog</a>
+        </div>
+        <div class="grid grid-rows-4 gap-2 md:gap-4 md:justify-center">
+          <a href="#" class="hover:text-hbrightblue">Contact Us</a>
+          <a href="#" class="hover:text-hbrightblue">Terms</a>
+          <a href="#" class="hover:text-hbrightblue">Privacy</a>
+        </div>
+        <div class="flex space-x-2 text-center justify-center">
+          <div class="group">
+            <a href="#"
+              class="flex items-center justify-center group-hover:text-hbrightblue w-6 h-6 group bg-transparent border border-white rounded-full group-hover:border-hbrightblue">
+              <i class="fa-brands fa-facebook-f fa-sm"></i></a>
+          </div>
+          <div class="group">
+            <a href="#"
+              class="flex items-center justify-center group-hover:text-hbrightblue w-6 h-6 group bg-transparent border border-white rounded-full group-hover:border-hbrightblue">
+              <i class="fa-brands fa-twitter fa-sm"></i></a>
+          </div>
+          <div class="group">
+            <a href="#"
+              class="flex items-center justify-center group-hover:text-hbrightblue w-6 h-6 group bg-transparent border border-white rounded-full group-hover:border-hbrightblue"><i
+                class="fa-brands fa-instagram fa-sm"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script>
+    function ValidateEmail(inputText, id, input) {
+      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      var checkEmail = document.getElementById(id);
+      var text = document.getElementById(input);
+      if (!inputText.value.match(mailformat)) {
+        checkEmail.innerHTML = 'Please check your email'
+        text.classList.add('border-red-400')
+        inputText.focus();
+        return false;
+      }else{
+        checkEmail.innerHTML = ''
+        text.classList.remove('border-red-400')
+        return true;
+      }
+    }
+  </script>
+</body>
+
+</html>
